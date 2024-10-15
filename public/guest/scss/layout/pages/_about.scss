@@ -1,0 +1,206 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  9.1 About css
+/*----------------------------------------*/
+.header-border.primary-page-header {
+    border-bottom: 0;
+}
+.breadcrumb-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    padding-top: 160px;
+    padding-bottom: 160px;
+  @media #{$md}{
+    padding-top: 110px;
+    padding-bottom: 130px;
+  }
+  @media #{$sm}{
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+  @media #{$xs}{
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        content: "";
+        background: var(--bd-common-black);
+        opacity: .4;
+    }
+}
+.about-back-title {
+    font-size: 200px;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--bd-common-white);
+    opacity: .3;
+    line-height: 1;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-fill-color: transparent;
+    @media #{$lg} {
+      font-size: 170px;
+    }
+    @media #{$md} {
+        font-size: 150px;
+        bottom: -35px;
+      }
+      @media #{$sm} {
+        font-size: 110px;
+        bottom: -25px;
+      }
+      @media #{$xs} {
+        font-size: 60px;
+        bottom: -10px;
+      }
+}
+.about-page-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: var(--bd-common-white);
+    position: relative;
+    @media #{$md,$lg} {
+      font-size: 45px;
+    }
+    @media #{$sm} {
+        font-size: 40px;
+      }
+      @media #{$xs} {
+        font-size: 30px;
+      }
+}
+.about-content {
+    padding-left: 70px;
+    @media #{$lg}{
+      padding-left: 30px;
+    }
+    @media #{$md,$sm,$xs} {
+        padding-left: 0px;
+      }
+    .about-title {
+        font-size: 40px;
+        margin-top: 7px;
+        font-weight: 600;
+        max-width: 600px;
+        margin-bottom: 40px;
+        @media #{$lg} {
+            font-size: 30px;
+            margin-bottom: 30px;
+          }
+          @media #{$md} {
+            font-size: 30px;
+            margin-bottom: 30px;
+            max-width: 450px;
+          }
+          @media #{$sm} {
+            font-size: 25px;
+            margin-bottom: 20px;
+            max-width: 380px;
+          }
+          @media #{$xs} {
+            font-size: 20px;
+            margin-bottom: 20px;
+          }
+    }
+}
+.about-img-wrapper{
+    img{
+        width: 100%;
+    }
+}
+.about-text {
+    margin-bottom: 40px;
+    @media #{$lg} {
+        margin-bottom: 25px;
+      }
+      @media #{$sm,$xs} {
+        margin-bottom: 20px;
+      }
+    h5 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        @media #{$xs} {
+            font-size: 18px;
+          }
+    }
+}
+.subscribe-btn.learn_btn {
+  background: transparent;
+  color: var(--bd-common-black);
+  border: 1px solid #D2D2D2;
+  height: 60px;
+  @media #{$lg} {
+    margin-top: 0px;
+  }
+  @media #{$sm,$xs} {
+    margin-top: 0px;
+  }
+  &:hover {
+      background: var(--bd-theme-primary);
+      color: var(--bd-common-white);
+      border-color: var(--bd-theme-primary);
+  }
+}
+//about-video-area
+.about-video-area{
+    height: 750px;
+    position: relative;
+    @media #{$md,$sm} {
+        height: 550px;
+       }
+       @media #{$xs} {
+        height: 450px;
+        background-size: cover;
+       }
+    .video-btn{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        &::before{
+            position: absolute;
+            content: "";
+            height: 120px;
+            width: 120px;
+            background: var(--bd-common-white);
+            border-radius: 50%;
+            animation-name: popupBtn;
+            animation-duration: 1.6s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+    }
+    .play-btn{
+        font-size: 16px;
+        color: var(--bd-common-black);
+        height: 120px;
+        width: 120px;
+        text-transform: uppercase;
+        font-weight: 500;
+        display: inline-block;
+        line-height: 120px;
+        text-align: center;
+        background: var(--bd-common-white);
+        border-radius: 50%;
+        position: relative;
+        z-index: 1;
+        &:hover{
+            background: var(--bd-theme-primary);
+            color: var(--bd-common-white);
+        }
+    }
+}

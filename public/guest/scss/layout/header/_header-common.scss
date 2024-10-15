@@ -1,0 +1,82 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.1 Header Common Style 
+/*----------------------------------------*/
+.bd-sticky {
+	position: fixed !important;
+	top: 0;
+	z-index: 111;
+	inset-inline-end: 0;
+	inset-inline-start: 0;
+	width: 100%;
+	-webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+	animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+	background: var(--bd-common-white);
+	-webkit-box-shadow: 0px 10px 20px 0px rgba(8, 0, 42, 0.08);
+	-moz-box-shadow: 0px 10px 20px 0px rgba(8, 0, 42, 0.08);
+	box-shadow: 0px 10px 20px 0px rgba(8, 0, 42, 0.08);
+}
+.header-transparent {
+	position: absolute;
+	inset-inline-start: 0;
+	margin: auto;
+	width: 100%;
+	z-index: 99;
+	background: var(--bd-bg-1);
+}
+.header__area {
+	.container {
+		max-width: 1440px;
+	}
+}
+.header {
+	&__area {
+		.header__btn-wrap {
+			.bd-gradient-btn {
+				height: 50px;
+				padding: 0 25px;
+			}
+		}
+	}
+	&__main {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media #{$md}{
+			padding: 18px 0px;
+		}
+		@media #{$sm,$xs}{
+			padding: 22px 0px;
+		}
+	}
+	&__left {
+		display: flex;
+		align-items: center;
+		gap: 60px;
+	}
+	&__contact {
+		p {
+			margin-bottom: 0;
+		}
+	}
+	&__contact {
+		display: flex;
+		gap: 8px;
+	}
+	&__btn-wrap {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+}
+.header__btn-wrap{
+	.bd-btn-primary {
+		height: 50px;
+		padding: 0 20px;
+	}
+}
+// Header Baricon
+.header-common {
+	background: var(--bd-bg-1);
+}

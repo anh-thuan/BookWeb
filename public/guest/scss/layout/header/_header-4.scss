@@ -1,0 +1,29 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.4 Header Style 4
+/*----------------------------------------*/
+.header4-top-left {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.home4-top-input {
+    input {
+        width: 103px;
+    }
+}
+.home3-main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    @media #{$xs,$sm,$md}{
+        padding: 22px 0px;
+    }
+}
+.header-border{
+    border-top: 1px solid var(--bd-border-secondary);
+    border-bottom: 2px solid var(--bd-common-black);
+}

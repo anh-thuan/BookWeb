@@ -1,0 +1,35 @@
+@use '../utils' as *;
+
+/*----------------------------------------
+   2.8 Basic pagination
+-----------------------------------------*/
+.pageination-wrapper {
+    .pagination {
+        justify-content: center;
+        .page-link {
+            padding: 0px;
+            margin: 0px;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            font-size: 14px;
+            line-height: 36px;
+            text-align: center;
+            background: var(--bd-common-white);
+            color: var(--bd-common-black);
+            border: 2px solid var(--bd-common-black);
+            margin-left: 4px;
+            &:hover {
+                background: var(--bd-common-black);
+                color: var(--bd-common-white);
+            }
+            &:focus{
+                box-shadow: none;
+            }
+        }
+        .active {
+            background: var(--bd-common-black);
+            color: var(--bd-common-white);
+        }
+    }
+}

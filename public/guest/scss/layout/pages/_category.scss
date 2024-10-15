@@ -1,0 +1,135 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  9.2 Category css
+/*----------------------------------------*/
+//cate-text-slide
+.blog-text-slide-title {
+	font-size: 90px;
+    display: inline-block;
+    position: relative;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    text-decoration: none;
+    @supports (-webkit-text-stroke: 2px var(--color-heading)) {
+        -webkit-text-stroke: 2px rgb(189, 189, 189);
+        color: transparent;
+    }
+    &:before {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        color: var(--bd-heading-primary);
+        white-space: nowrap;
+        content: attr(data-hover);
+        transition: all 0.5s cubic-bezier(0.17, 0.67, 0.32, 0.87);
+    }
+    &:hover {
+        -webkit-text-stroke-color: var(--color-heading);
+        &:before {
+            width: 100%;
+        }
+    }
+    @media #{$xxl} {
+        font-size: 70px;
+    }
+    @media #{$xl} {
+        font-size: 80px;
+    }
+	@media #{$lg} {
+        font-size: 75px;
+    }
+    @media #{$md} {
+        font-size: 60px;
+    }
+    @media #{$sm} {
+        font-size: 50px;
+    }
+    @media #{$xs} {
+        font-size: 44px;
+    }
+}
+.blog-text-slide {
+    text-align: center !important;
+}
+
+//single-category-wrap
+.single-category-wrap{
+	&:hover{
+		.category-img{
+			img{
+				transform: scale(1.04);
+			}
+		}
+	}
+	.category-img{
+		overflow: hidden;
+	}
+}
+
+//category-style2-wrap
+.category-style2-wrap{
+	display: flex;
+	gap: 40px;
+	&:hover{
+		.category-img{
+			img{
+				transform: scale(1.04);
+			}
+		}
+	}
+	@media #{$lg}{
+		gap: 20px;
+		flex-direction: column;
+	}
+	@media #{$md,$sm,$xs}{
+		flex-direction: column;
+		gap: 25px;
+	}
+	.category-img{
+		flex: 0 0 auto;
+		overflow: hidden;
+	}
+}
+
+//single-post-wrap
+.single-post-wrap2{
+	padding-left: 20px;
+	@media #{$md,$sm,$xs}{
+		padding-left: 0px;
+	}
+}
+.single-post-img{
+	overflow: hidden;
+	img{
+		width: 100%;
+	}
+	&:hover{
+		img{
+		  transform: scale(1.04);
+		}
+	}
+}
+
+
+//singlepost-mid-wrap2
+.singlepost-mid-wrap{
+	float: left;
+	margin-bottom: 20px;
+	margin-right: 30px;
+	@media #{$sm,$xs}{
+		float: none;
+		margin-right: 0px;
+	}
+	img{
+		width: 100%;
+	}
+}
+.left-side-box{
+	@media #{$md,$sm,$xs}{
+		flex-direction: column-reverse;
+	}
+}

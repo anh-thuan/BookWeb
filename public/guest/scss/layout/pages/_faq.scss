@@ -1,0 +1,252 @@
+@use "../../utils" as *;
+
+/*----------------------------------------*/
+/*  9.5 Faq css
+/*----------------------------------------*/
+.faq__content {
+  padding-right: 65px;
+
+  @media #{$xs, $sm, $md, $lg} {
+    padding-right: 0;
+  }
+}
+
+// FAQ style
+.bd__faq {
+  background: var(--bd-bg-1);
+  .accordion-button {
+    font-size: 26px;
+    color: var(--bd-common-white);
+    background: transparent;
+    font-weight: 600;
+    display: inline-block;
+    @media #{$md} {
+      font-size: 22px;
+    }
+    @media #{$xs,$sm} {
+      font-size: 20px;
+    }
+    @media #{$xs} {
+      padding-left: 0px;
+     }
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:not(.collapsed) {
+      border-radius: 6px 6px 0 0;
+      background: rgba(255, 255, 255, 0.1);
+      @include light {
+        background: var(--bd-common-black);
+      }
+
+      color: varvar(--bd-common-white);
+      box-shadow: none;
+
+      &::after {
+        border-color: transparent;
+       border: 1px solid var(--bd-common-black);
+        color: var(--bd-common-black);
+        content: "\f106";
+      }
+    }
+
+    &::after {
+      position: absolute;
+      right: 30px;
+      content: "\f107";
+      background-image: none;
+      font-family: var(--bd-ff-fontawesome);
+      font-size: 16px;
+      font-weight: 400;
+      height: 30px;
+      width: 30px;
+      border: 1px solid var(--bd-border-primary);
+      line-height: 30px;
+      text-align: center;
+      color: var(--bd-common-black);
+      top: 50%;
+      @include border-radius(50%);
+      @extend %translateY1_2;
+      @media #{$sm,$xs} {
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+      }
+      @media #{$xxs, $lg} {
+        left: 20px;
+      }
+    }
+  }
+  .accordion-body {
+    color: var(--bd-common-black);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0 0 6px 6px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    @include light {
+      background: var(--bd-bg-10);
+    }
+    border-radius: 0 0 6px 6px;
+    @media #{$xxs} {
+      padding-left: 80px;
+      padding-right: 25px;
+    }
+    @media #{$sm,$xs} {
+     padding-left: 25px;
+    }
+    @media #{$xs} {
+      padding-left: 0px;
+     }
+    >P {
+      margin-bottom: 0;
+    }
+  }
+  .accordion-item {
+    border: 0;
+    padding: 8px 20px;
+    border: 0;
+    padding-bottom: 0px;
+    background: transparent;
+    @media #{$xs} {
+      padding: 5px 10px;
+     }
+  }
+}
+.accordion-button.bd-accrodient{
+  color: var(--bd-common-black);
+  &:not(.collapsed) {
+    border-radius: 6px 6px 0 0;
+    color: var(--bd-common-black);
+    @include light {
+      background: var(--bd-common-black);
+    }
+  }
+}
+
+
+//accordion-body
+.faq__style.gallery-faq{
+  margin-bottom: 40px;
+}
+
+//page-css-start
+.skill-award {
+	position: absolute;
+	bottom: 80px;
+	left: 34px;
+	h6 {
+		height: 122px;
+		width: 122px;
+		background: var(--bd-common-white);
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		color: #161616;
+		position: relative;
+		transform: rotate(-30deg);
+		&:after {
+			position: absolute;
+			content: "";
+			height: 144px;
+			width: 144px;
+			background: va;
+			border: 1px dashed var(--bd-common-white);
+			border-radius: 50%;
+			-webkit-animation-name: rotateCircle;
+			animation-name: rotateCircle;
+			-webkit-animation-duration: 20s;
+			animation-duration: 20s;
+			-webkit-animation-iteration-count: infinite;
+			animation-iteration-count: infinite;
+			-webkit-animation-timing-function: linear;
+			animation-timing-function: linear;
+		}
+	}
+}
+.skill-thumb {
+	background: var(--bd-theme-primary);
+	text-align: center;
+}
+.skill-content {
+    padding: 0 60px;
+	@media #{$xl} {
+		padding: 0 30px;
+	}
+	@media #{$xs,$sm,$md,$lg} {
+		padding: 0;
+	}
+    & > p {
+        margin-bottom: 40px;
+    }
+}
+
+// Skill progress
+.bd-progress__skill-item {
+	position: relative;
+	&:not(:last-child) {
+		margin-bottom: 20px;
+	}
+	h5 {
+		margin-bottom: 15px;
+		font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+	}
+	.progress-count {
+		position: absolute;
+		top: 0px;
+		right: 0;
+		font-weight: 500;
+		color: var(--bd-theme-primary);
+	}
+	.progress {
+		height: 4px;
+		background-color: transparent;
+		border-radius: 0;
+		overflow: visible;
+		position: relative;
+		z-index: 1;
+		&::after {
+			position: absolute;
+			content: "";
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			height: 4px;
+			width: 100%;
+			background: #EBEBEB;
+			z-index: -1;
+			border-radius: 0px;
+		}
+	}
+	.progress-bar {
+		background-color: var(--bd-theme-primary);
+		overflow: visible;
+		border-radius: 0px;
+	}
+}
+
+// Skill style 2
+.skill-content-2 {
+	padding-right: 100px;
+	@media #{$xs, $sm, $md} {
+		padding-right: 0;
+	}
+}
+//progress-end
+
+.faq-img{
+  padding-left: 90px;
+  img{
+    width: 100%;
+  }
+  @media #{$lg} {
+   padding-left: 10px;
+  }
+  @media #{$md,$sm,$xs} {
+    padding-left: 0px;
+   }
+}

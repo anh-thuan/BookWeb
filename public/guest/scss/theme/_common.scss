@@ -1,0 +1,82 @@
+@use '../utils' as *;
+
+/*---------------------------------
+    1.1 Common Classes
+---------------------------------*/
+.w-img{
+	& img{
+		width: 100%;
+	}
+}
+.m-img{
+	& img{
+		max-width: 100%;
+	}
+}
+.fix {
+    overflow:hidden
+}
+.clear{
+    clear: both;
+}
+
+.f-left {
+	float: left
+}
+.f-right {
+	float: right
+}
+.z-index-1{
+	z-index: 1;
+}
+.z-index-11{
+	z-index: 11;
+}
+.opacity-05 {
+	opacity: 0.5;
+}
+.overflow-y-visible{
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+.p-relative{
+	position: relative;
+}
+.p-absolute{
+	position: absolute;
+}
+.include-bg{
+	@include background();
+}
+.hr-1 {
+	border-top: 1px solid rgb(232, 232, 232);
+}
+.x-clip {
+	overflow-x: clip;
+}
+.o-xs {
+	@media #{$xs} {
+		overflow-x: hidden;
+	}
+}
+.color-white{
+	color: var(--bd-common-white)
+}
+.valign {
+	@include flexbox();
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+}
+/*----------------------------------------
+    Body background 
+-----------------------------------------*/
+.bg-black{
+background: var(--bd-common-black);
+}
+

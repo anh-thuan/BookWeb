@@ -1,0 +1,61 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  7.4 Banner Style 4
+/*----------------------------------------*/
+// Banner style 4
+.banner-technology-area{
+	padding-top: 60px;
+	@media #{$sm,$md} {
+		padding-top: 40px;
+	  }
+	  @media #{$xs} {
+		padding-top: 30px;
+	  }
+}
+.banner-technolgy-img img {
+	width: 100%;
+  }
+.technology-post-title{
+	font-size: 40px;
+	margin-bottom: 130px;
+	a{
+		&:hover{
+			color: var(--bd-theme-primary);
+		}
+	}
+	@media #{$xl} {
+      font-size: 34px;
+	}
+	@media #{$lg,$md} {
+		font-size:26px;
+	  }
+	  @media #{$sm} {
+		font-size:24px;
+		margin-bottom: 50px;
+	  }
+	  @media #{$xs} {
+		font-size:22px;
+		margin-bottom: 50px;
+	  }
+}
+.blog-post-meta{
+	span{
+		font-size: 14px;
+		color: var(--bd-text-body-2);
+		text-transform: capitalize;
+		@media #{$lg} {
+			font-size: 12px;
+		  }
+	}
+}
+.technology-content-wrapper {
+	padding-left: 90px;
+	padding-right: 85px;
+	@media #{$lg}{
+		padding-left: 50px;
+	}
+	@media #{$md,$sm,$xs} {
+		padding-left: 0px;
+		padding-right: 0px;
+	  }
+  }

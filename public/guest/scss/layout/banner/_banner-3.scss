@@ -1,0 +1,149 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  7.3 banner Style 3
+/*----------------------------------------*/
+
+// Banner style 3
+.cart-hero-area{
+	position: relative;
+	padding-top: 80px;
+	@media #{$sm,$xs} {
+		padding-top: 45px;
+	  }
+	&::before{
+		position: absolute;
+		content: "";
+		height: 455px;
+		width: 100%;
+		background: var(--bd-bg-1);
+		top: 0;
+		z-index: -2;
+	}
+}
+.banner-left-single-iteam{
+	background: var(--bd-common-white);
+	filter: drop-shadow(0px 30px 60px rgba(0, 0, 0, 0.06));
+}
+.banner-img-content{
+	padding: 0px 30px;
+	padding-bottom: 20px;
+	@media #{$xs} {
+		padding: 0px 15px;
+		padding-right: 0px;
+		padding-bottom: 20px;
+	  }
+}
+  .banner-img{
+	position: relative;
+	overflow: hidden;
+	img{
+		width: 100%;
+	}
+	.bolt-icon{
+		position: absolute;
+		bottom: 30px;
+        right: 30px;
+		@media #{$xs} {
+			bottom: 20px;
+            right: 20px;
+		  }
+		a{
+			font-size: 14px;
+			height: 36px;
+			width: 36px;
+			line-height: 36px;
+			color: var(--bd-common-white);
+			background: var(--bd-theme-primary);
+			border-radius: 50%;
+			display: inline-block;
+			text-align: center;
+			border: 1px solid transparent;
+			&:hover{
+				background: var(--bd-common-black);
+				color: var(--bd-common-white);
+			}
+		}
+	}
+  }
+  .banner-right-content{
+    padding: 37px 40px;
+	@media #{$sm} {
+		padding: 27px 20px;
+	  }
+	@media #{$xs} {
+		padding: 20px 8px;
+		padding-top: 0px;
+	  }
+	  
+  }
+  .banner-right-box{
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+  }
+.banner-right-single-box{
+	display: flex;
+	background: var(--bd-common-white);
+	filter: drop-shadow(0px 30px 60px rgba(0, 0, 0, 0.06));
+	&:hover {
+        .banner-right-img {
+            img {
+                transform: scale(1.04);
+            }
+        }
+    }
+	@media #{$xs} {
+		display: block;
+	  }
+	.banner-right-img {
+		flex: 0 0 auto;
+		overflow: hidden;
+		width: 180px;
+		@media #{$xs} {
+			margin-bottom: 30px;
+			width: 100%;
+		  }
+		img{
+			width: 100%;
+		}
+	  }
+}
+.banner-two-post-content{
+	p{
+		margin-bottom: 0px;
+	}
+}
+.banner-two-post-content-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 230px;
+	position: relative;
+	padding-right: 80px;
+	@media #{$xs,$sm,$md,$lg} {
+		padding-right: 0;
+	}
+	.banner-img{
+		overflow: hidden;
+	}
+     &:hover{
+		.banner-img{
+			img{
+				transform: scale(1.04);
+			}
+		}
+	 }
+    @media #{$xl} {
+        gap: 185px;
+    }
+
+    @media #{$lg} {
+        gap: 110px;
+    }
+	@media #{$md} {
+        gap: 50px;
+    }
+    @media #{$xs,$sm} {
+        gap: 50px;
+    }
+}
+

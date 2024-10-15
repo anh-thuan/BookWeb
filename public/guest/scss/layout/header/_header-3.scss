@@ -1,0 +1,38 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.3 Header Style 3
+/*----------------------------------------*/
+.home5-header-style{
+    border-left: 2px solid var(--bd-common-black);
+    border-right: 2px solid var(--bd-common-black);
+    .main-header{
+        border-bottom: 2px solid var(--bd-common-black);
+        padding: 20px 40px;
+        @media #{$xs,$sm,$md} {
+            padding: 12px 20px;
+        }
+    }
+    .header-top{
+        padding: 0px 0px;
+    }
+    .header-top-area{
+        border-bottom: 2px solid var(--bd-common-black);
+        padding: 6px 40px;
+        @media #{$xs} {
+            justify-content: center;
+           }
+    }
+    .top-search-input{
+        input{
+            width: 220px;
+            padding-right: 0px;
+            &::placeholder{
+                text-transform: uppercase;
+            }
+            &::-moz-placeholder{
+                text-transform: uppercase;
+            }
+        }
+    }
+}

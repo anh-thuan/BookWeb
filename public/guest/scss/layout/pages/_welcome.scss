@@ -1,0 +1,49 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  9.16 welcome css
+/*----------------------------------------*/
+
+.welcome-news-area {
+	padding: 100px 0 90px;
+	@media #{$xs,$sm,$md,$lg} {
+		padding: 70px 0 60px;
+	}
+	@media #{$xs} {
+		padding: 55px 0px;
+	}
+}
+.welcome-news-title{
+	font-weight: 600;
+	font-size: 100px;
+	line-height: 1;
+	background: linear-gradient(90.02deg, rgba(14, 32, 42, 0) 0.02%, #071015 49.79%, rgba(0, 0, 0, 0) 99.55%);
+    background-clip: border-box;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	@media #{$xxl} {
+		font-size: 75px;
+	}
+	@media #{$xtxl} {
+		font-size: 88px;
+	}
+	@media #{$xl} {
+		font-size: 65px;
+	}
+	@media #{$lg} {
+		font-size: 50px;
+	}
+	@media #{$md} {
+		font-size: 40px;
+	}
+	@media #{$xs} {
+		font-size: 25px;
+	}
+	@media #{$sm} {
+		font-size: 30px;
+	}
+	@media #{$xxs} {
+		font-size: 17px;
+	}
+}

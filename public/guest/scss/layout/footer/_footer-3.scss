@@ -1,0 +1,67 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.3 Footer Style 3
+/*----------------------------------------*/
+.home5-footer-style{
+	border-left: 2px solid var(--bd-common-black);
+	border-right: 2px solid var(--bd-common-black);
+}
+.footer-style-right{
+	ul{
+		display: flex;
+		li{
+			a{
+				color: var(--bd-common-black);
+				font-size: 14px;
+				font-weight: 500;
+				padding: 8px 23px;
+				border: 2px solid var(--bd-common-black);
+				border-radius: 30px;
+				display: inline-block;
+				margin-left: 4px;
+				@media #{$xs} {
+					padding: 5px 17px;
+				}
+				&:hover{
+					background: var(--bd-theme-primary);
+					color: var(--bd-common-white);
+					border-color: var(--bd-theme-primary);
+				}
+			}
+		}
+	}
+}
+.footer-style-top{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-top: 2px solid var(--bd-common-black);
+	padding: 40px 40px;
+	@media #{$sm,$md} {
+        padding: 15px 20px;
+    }
+	@media #{$xs} {
+		flex-direction: column;
+		gap: 20px;
+		align-items: center;
+		padding: 20px 0px;
+	}
+}
+.copy-right-text.footer5-copyright{
+	border-top: 2px solid var(--bd-common-black);
+	padding: 20px 0px;
+	@media #{$md,$sm,$xs} {
+		padding: 12px 0px;
+    }
+	p{
+		color: var(--bd-common-black);
+		margin-bottom: 0px;
+		a{
+			font-weight: 600;
+			&:hover{
+				color: var(--bd-theme-primary);
+			}
+		}
+	}
+}

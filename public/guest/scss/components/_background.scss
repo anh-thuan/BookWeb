@@ -1,0 +1,26 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.2 Background
+/*----------------------------------------*/
+
+.white-bg {
+  background-color: var(--bd-common-white);
+}
+.black-bg {
+  background-color: var(--bd-common-black);
+}
+.footer-bg {
+  background-color: var(--bd-bg-1);
+  @include light {
+    background-color: var(--bd-bg-2);
+  }
+}
+
+// Theme bg
+.bg-color-black {
+  background: var(--bd-common-black);
+}
+.theme-bg-2 {
+  background-color: var(--bd-bg-2);
+}

@@ -1,0 +1,62 @@
+$colors: (
+  common: (
+    "white": #FFFFFF,
+    "black": #222222,
+    "placeholder": #7F8387,
+    "selection": #262626,
+    "gray": #909090,
+  ),
+  body: (
+    "primary": #1B1D1F,
+    "secondary": #ffffff,
+  ),
+  theme: (
+    "primary": #5A42FF,
+    "secondary": #6409D8,
+    "tertiary": #6409D8,
+    "quaternary": #096BD8,
+    "lightest": #B8BBBF,
+    "lighte": #84888C,
+    "medium": #4B4E52,
+    "dark": #252729,
+    "darkest": #1B1D1F,
+  ),
+  heading: (
+    "primary": #222222,
+    "secondary": #021d35,
+  ),
+  text: (
+    "body": #222222,
+    "body-2": #666666,
+    "primary": #ffffff,
+    "secondary": #111111,
+  ),
+  light: (
+    "lightest": #B8BBBF,
+    "lighte": #84888C,
+    "medium": #4B4E52,
+    "dark": #252729,
+    "darkest": #1B1D1F,
+  ),
+  bg: (
+    "1": #F4F4F4,
+    "2": #032040,
+    "3": #096BD8,
+  ),
+  border: (
+    "primary": #222222,
+    "secondary": rgba(34, 34, 34, .14),
+    "tertiary": rgba(75, 78, 82, 1),
+  ),
+  gradient: (
+    "1": linear-gradient(90deg, #096BD8 0%, #6409D8 100%),
+  ),
+);
+$white: #FFFFFF;
+$black: #000000;
+$theme-primary: #5A42FF;
+$border-secondary: #fb5141;
+$border-tertiary: #674ad9;
+$border-quaternary: #e540a3;
+
+

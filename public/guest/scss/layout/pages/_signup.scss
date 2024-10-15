@@ -1,0 +1,99 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  9.11 Signup css
+/*----------------------------------------*/
+.mx-width{
+	max-width: 550px;
+	margin-right: auto !important;
+    margin-left: auto !important;
+	.signup-wrapper{
+		background: var(--bd-bg-1);
+		padding: 45px 40px;
+		text-align: center;
+		@media #{$xs}{
+			padding: 40px 25px;
+		}
+	}
+}
+.signup-title{
+	font-size: 28px;
+    font-weight: 600;
+     line-height: 1.3;
+     color: var(--bd-common-black);
+	 margin-bottom: 35px;
+}
+.sign-input-box{
+	input{
+		width: 100%;
+		background: var(--bd-common-white);
+		border: 1px solid rgba(17, 16, 16, 0.14);
+		height: 60px;
+		color: var(--bd-common-black);
+		padding: 0 25px;
+	}
+}
+.signup-btn{
+	.fill_btn{
+		font-size: 16px;
+		color: var(--bd-common-white);
+		font-weight: 500;
+		background:  var(--bd-common-black);
+		padding: 0px 32px;
+		height: 60px;
+		width: 100%;
+		@media #{$xs}{
+			height: 50px;
+		}
+		&:hover{
+			background: var(--bd-theme-primary);
+		}
+	}
+}
+.ms-divided-btn {
+	text-align: center;
+	position: relative;
+	&::before{
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 2px;
+		background: rgba(17, 16, 16, 0.14);
+		inset-inline-start: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	span{
+		background: var(--bd-bg-1);
+		padding: 0 20px;
+		position: relative;
+		color: var(--bd-common-black);
+		font-weight: 600;
+		text-transform: capitalize;
+	}
+  }
+  .ms-fb-btn {
+	display: block;
+	height: 60px;
+	line-height: 60px;
+	background: var(--bd-theme-primary);
+	width: 100%;
+	color: var(--bd-common-white);
+	font-weight: 500;
+	@media #{$xs}{
+		height: 50px;
+		line-height: 50px;
+	}
+	i{
+		margin-inline-end: 10px;
+	}
+  }
+  .ms-not-account p {
+	font-weight: 500;
+	font-size: 15px;
+	 margin-bottom: 0px;
+	a{
+		color: var(--bd-theme-primary);
+	}
+  }
+ 

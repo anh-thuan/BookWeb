@@ -1,0 +1,47 @@
+
+// font url
+
+$font-url: 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap' ;
+
+// font family
+$font-family: (
+    ff: (
+        "body": "'Poppins', sans-serif",
+        "heading":"'Poppins', sans-serif",
+        "p": "'Inter', sans-serif",
+        "fontawesome": '"Font Awesome 6 Pro"',
+        "icomoon": '"icomoon"',
+    )
+);
+
+// font weight
+$font-scale: (
+    fw: (
+        "normal": normal,
+        "thin": 100,
+        "elight": 200,
+        "light": 300,
+        "regular": 400,
+        "medium": 500,
+        "sbold": 600,
+        "bold": 700,
+        "ebold": 800,
+        "black": 900,
+    )
+);
+
+// font size
+$font-size: (
+    fs: (
+        "body": 15px,
+        "p": 15px,
+        "h1": 58px,
+        "h2": 46px,
+        "h3": 36px,
+        "h4": 30px,
+        "h5": 24px,
+        "h6": 18px,
+    )
+);
+
+

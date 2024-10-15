@@ -1,0 +1,74 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  9.10 recent-post css
+/*----------------------------------------*/
+
+// recent-post style
+.recent-post-item {
+	@extend %bd-transition-3;
+	&:hover {
+		.post-img {
+			img {
+				transform: scale(1.05);
+			}
+		}
+	}
+}
+.recent-news-title{
+	@media #{$md} {
+		font-size: 30px;
+		margin-bottom: 20px;
+	}
+	@media #{$sm} {
+		font-size: 28px;
+		margin-bottom: 20px;
+	}
+	@media #{$xs} {
+		font-size: 24px;
+		margin-bottom: 20px;
+	}
+}
+.recent-post-title {
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	@media #{$lg,$md,$sm,$xs} {
+		font-size: 20px;
+	}
+	a {
+		&:hover {
+			color: var(--bd-theme-primary);
+		}
+	}
+}
+.recent-post-content {
+	& > p {
+		margin-bottom: 0;
+	}
+}
+.recent-post-area {
+    background: var(--bd-bg-1);
+}
+//home-2-recent-post
+.loadmore-btn {
+	height: 60px;
+	padding: 0px 30px;
+	background: var(--bd-common-white);
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 600;
+	margin-top: 20px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	&:hover{
+	  background: var(--bd-theme-primary);
+	  color: var(--bd-common-white);
+	}
+	i{
+	  font-weight: 400;
+	  margin-left: 10px;
+	}
+  }

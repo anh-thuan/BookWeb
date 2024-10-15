@@ -1,0 +1,149 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  9.9 newsletter css
+/*----------------------------------------*/
+.newsletter-area {
+    border-top: 1px solid var(--bd-border-secondary);
+}
+.newsletter-product-cat-title {
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--bd-theme-primary);
+}
+.news-letter-title {
+    font-size: 40px;
+    font-weight: 600;
+    @media #{$xxl,$xl} {
+        font-size: 34px;
+    }
+    @media #{$md} {
+        font-size: 30px;
+    }
+    @media #{$sm} {
+        font-size: 26px;
+    }
+    @media #{$xs} {
+        font-size: 22px;
+    }
+    br {
+        @media #{$xs,$xs} {
+            display: none;
+        }
+    }
+}
+.newsletter-input-field {
+    position: relative;
+    .news-letter-icon {
+        position: absolute;
+        left: 0;
+        top: -1px;
+        font-size: 16px;
+        color: var(--bd-theme-primary);
+    }
+    input {
+        height: 38px;
+        width: 100%;
+        border-bottom: 2px solid var(--bd-common-black);
+        background: transparent;
+        border-radius: 0;
+        padding: 20px 0px;
+        padding-top: 0px;
+        padding-left: 25px;
+        padding-right: 130px;
+        color: var(--bd-common-black);
+        &:focus {
+            border-left: 0;
+            border-top: 0;
+            border-right: 0;
+            outline: 0;
+            border-color: var(--bd-common-black);
+        }
+
+    }
+    .newsletter-btn {
+        font-weight: 600;
+        text-transform: uppercase;
+        position: absolute;
+        right: 0px;
+        top: 0;
+        &::before {
+            position: absolute;
+            bottom: 0;
+            left: auto;
+            right: 0;
+            height: 1px;
+            width: 0;
+            background: var(--bd-theme-primary);
+            content: "";
+            transition: .3s;
+        }
+        @media #{$xs} {
+            font-size: 12px;
+        }
+        &:hover {
+            color: var(--bd-theme-primary);
+            &::before {
+                left: 0;
+                right: auto;
+                width: 100%;
+                z-index: 2;
+            }
+        }
+    }
+}
+.subscribe-input-field {
+    input {
+        padding-left: 0px;
+    }
+}
+.bd-blog-wrapper {
+    @media #{$md} {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+//newsletter-area-2
+.newsletter-area-2 {
+    background: var(--bd-common-black);
+}
+.news-letter-icon.newsletter-icon2 {
+    color: var(--bd-common-white);
+    font-size: 60px;
+}
+.newsletter-product-cat-title-white {
+    color: var(--bd-common-white);
+}
+.news-letter-title-white {
+    color: var(--bd-common-white);
+}
+.newsletter-area-2 {
+    padding: 120px 0px;
+    @media #{$lg} {
+        padding: 80px 9px;
+    }
+    @media #{$md} {
+        padding: 80px 30px;
+    }
+    @media #{$sm,$xs} {
+        padding: 50px 9px;
+    }
+    .newsletter-input-field {
+        input {
+            color: var(--bd-common-white);
+            border-color: rgba($color: $white, $alpha: .2);
+        }
+        .newsletter-btn {
+            color: var(--bd-common-white);
+        }
+    }
+}
+.featured-post-img {
+    img {
+        @media #{$md,$sm,$xs} {
+            width: 100%;
+        }
+    }
+}

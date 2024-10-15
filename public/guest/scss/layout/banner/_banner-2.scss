@@ -1,0 +1,22 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  7.2 banner Style 2
+/*----------------------------------------*/
+// Banner style
+.banner-content {
+	p{
+		color: var(--bd-text-body-2);
+		@media #{$xs} {
+			font-size: 15px;
+		  }
+	}
+}	
+.banner-two-thumb-box {
+	img{
+		width: 100%;
+		@media #{$sm,$xs}{
+			width: 100%;
+			aspect-ratio: 100/100;
+		}
+	}
+}

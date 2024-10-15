@@ -1,0 +1,78 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.2 Header Style 2
+/*----------------------------------------*/
+.header-2 {
+    background: #323436;
+}
+.header-3 {
+	.container {
+		max-width: 1920px;
+		padding: 0 80px;
+		@media #{$lg} {
+			padding: 0 50px;
+		}
+		@media #{$sm, $md} {
+			padding: 0 30px;
+		}
+		@media #{$xs} {
+			padding: 0 15px;
+		}
+	}
+	& .sub__btn {
+		background: transparent;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		color: var(--bd-common-white);
+	}
+	.header__btn-wrap {
+		.bd-gradient-btn {
+			height: 45px;
+			padding: 0 25px;
+		}
+	}
+}
+
+//package-css-end
+.home-2-menu {
+    display: flex;
+    gap: 160px;
+    align-items: center;
+    @media #{$xl} {
+        gap: 80px;
+    }
+    @media #{$md,$sm,$xs} {
+        gap: 0px;
+    }
+}
+.home-2-logo.logo {
+    @media #{$lg} {
+        margin-left: -80px;
+    }
+}
+.shape-blue {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.shape-blue2 {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    z-index: -22;
+}
+
+.top-search-input.home-2-top-search {
+    input {
+        color: var(--bd-common-black);
+    }
+
+    .top-search-btn {
+        color: var(--bd-common-black);
+    }
+}
+
+
+
+

@@ -1,0 +1,120 @@
+@use "../../utils" as *;
+
+/*----------------------------------------*/
+/*  9.8 hand picked css
+/*----------------------------------------*/
+.picked-news-inner-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+.picked-news-item {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  &:hover {
+    img {
+      transform: scale(1.05);
+    }
+  }
+  img {
+    width: 100%;
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.4;
+    content: "";
+    z-index: 11;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+  }
+  .hand-picked-content {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    z-index: 15;
+    right: 30px;
+    .product-cat-title {
+      color: var(--bd-common-white); 
+      margin-bottom: 10px;
+      a {
+        background-image: linear-gradient(#fff, #fff),
+          linear-gradient(#fff, #fff);
+        display: inline;
+        background-size: 0% 1px, 0 1px;
+        background-position: 100% 100%, 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 0.4s linear;
+        &:hover {
+          color: var(--bd-common-white);
+          background-size: 0 1px, 100% 1px;
+        }
+      }
+      &::before {
+        background: var(--bd-common-white);
+      }
+    }
+  }
+}
+.picked-mid-title{
+  color: var(--bd-common-white);
+  @media #{$xs}{
+    font-size: 20px;
+  }
+  a {
+    background-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
+    display: inline;
+    background-size: 0% 1px, 0 1px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.4s linear;
+    &:hover {
+      background-size: 0 1px, 100% 1px;
+      color: var(--bd-common-white);
+    }
+  }
+}
+.picked-news-title {
+  color: var(--bd-common-white);
+  border: 0;
+  padding: 0;
+  @media #{$xs,$lg}{
+    font-size: 20px;
+  }
+  a {
+    background-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
+    display: inline;
+    background-size: 0% 1px, 0 1px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.4s linear;
+    &:hover {
+      background-size: 0 1px, 100% 1px;
+      color: var(--bd-common-white);
+    }
+  }
+}
+.single-recent-box {
+	.card-blog-post-title {
+	  @media #{$md} {
+		font-size: 20px;
+	  }
+	  @media #{$sm} {
+		font-size: 24px;
+	  }
+	}
+}
+.picked-news-mid-thumb {
+	.picked-news-title {
+		font-size: 24px;
+		@media #{$lg} {
+		  font-size: 20px;
+		}
+		@media #{$sm,$xs} {
+		  font-size: 18px;
+		}
+	 }
+}

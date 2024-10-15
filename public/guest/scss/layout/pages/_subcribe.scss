@@ -1,0 +1,217 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  9.14 Subscribe css
+/*----------------------------------------*/
+.subscribe-area{
+	background:  #ECE9FF;
+	padding-left: 120px;
+	padding-top: 120px;
+	padding-bottom: 120px;
+	position: relative;
+	border-left: 2px solid var(--bd-theme-primary);
+	border-bottom: 2px solid var(--bd-theme-primary);
+	@media #{$md} {
+       padding: 80px 50px;
+    }
+	@media #{$sm} {
+		padding: 50px 20px;
+	 }
+	@media #{$xs} {
+		padding: 30px 20px;
+	 }
+	&::before{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		content: "";
+		background: var(--bd-theme-primary);
+		top: 6px;
+		left: 6px;
+		z-index: -2;
+	}
+	.subscribe-border-shape{
+		position: absolute;
+		right: 0px;
+		top: 0px;
+	}
+	.subscribe-area-shape{
+		position: absolute;
+		right: 50px;
+		bottom: 50px;
+		@media #{$xl,$lg}{
+			bottom: 30px;
+		}
+		@media #{$md} {
+			right: 0px;
+			bottom: 30px;
+			width: 150px;
+		}
+		@media #{$sm,$xs} {
+			display: none;
+		}
+	}
+}
+.subscribe-input-wrapper{
+	display: flex;
+	gap: 20px;
+	padding-top: 60px;
+	padding-bottom: 20px;
+	@media #{$sm}{
+		padding-top: 40px;
+		display: block;
+	}
+	@media #{$xs}{
+		padding-top: 30px;
+		display: block;
+	}
+}
+.subscribe-wrapper{
+	.subscribe-title{
+	font-weight: 600;
+	max-width: 560px;
+	font-size: 40px;
+	@media #{$md,$sm} {
+		font-size: 25px;
+	}
+	@media #{$xs} {
+		font-size: 20px;
+	}
+	}
+  }
+  .subscribe-input{
+	position: relative;
+	width: 350px;
+	@media #{$sm,$xs} {
+		width: 100%;
+	}
+	input{
+		width: 100%;
+		height: 60px;
+		background: var(--bd-common-white);
+		border-radius: 0;
+		border: 2px solid var(--bd-common-black);
+		color: var(--bd-common-black);
+		&::placeholder{
+			color:  #B9B9B9;
+			font-family: var(--bd-ff-p);
+			font-size: 16px;
+			font-weight: 400;
+			text-transform: uppercase;
+			}
+			&::-moz-placeholder{
+				color:  #B9B9B9;
+				font-family: var(--bd-ff-p);
+				font-size: 16px;
+				font-weight: 400;
+				text-transform: uppercase;
+				}
+	}
+  }
+  .input-icon{
+	font-size: 16px;
+	position: absolute;
+	right: 22px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: var(--bd-common-black);
+  }
+  .input-btn{
+	height: 60px;
+	background: var(--bd-common-black);
+	color: var(--bd-common-white);
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 600;
+	display: inline-flex;
+	align-items: center;
+	gap: 20px;
+    padding: 0px 20px;
+	@media #{$sm,$xs} {
+		margin-top: 20px;
+		width: 100%;
+		gap: 10px;
+		justify-content: center;
+	}
+	&:hover{
+		background: var(--bd-theme-primary);
+	}
+	i{
+		height: 40px;
+		width: 40px;
+		border-radius: 50%;
+		background: var(--bd-common-white);
+		color: var(--bd-common-black);
+		font-size: 16px;
+		text-align: center;
+		line-height: 40px;
+		transition: .3s;
+		&:hover{
+			background: var(--bd-common-black);
+			color: var(--bd-common-white);
+			i {
+				color: var(--bd-common-white);
+			}
+		}
+	}
+  }
+
+  //check mark css-start
+  .containe {
+	display: block;
+	position: relative;
+	padding-left: 26px;
+	cursor: pointer;
+	font-family: var(--bd-ff-p);
+	text-transform: uppercase;
+	line-height: 18px;
+	font-weight: 400;
+	color: #000000;
+	font-size: 16px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	@media #{$xs} {
+		font-size: 15px;
+	}
+	input{
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+	}
+  }
+  .checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 14px;
+	width: 14px;
+	border: 1px solid #000000;
+	padding: 2px;
+	background: var(--bd-common-white);
+	border-radius: 50%;
+	@media #{$xs} {
+		top: 3px;
+	}
+  }
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  .containe input:checked ~ .checkmark:after {
+    display: block;
+  }
+  .containe .checkmark:after {
+    top: 3px;
+    left: 3px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #000000;
+  }
+
+//   checkmark-css end

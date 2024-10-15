@@ -1,0 +1,109 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.2 Footer Style 2
+/*----------------------------------------*/
+.footer-white {
+	.footer-link {
+		ul {
+			li {
+				a {
+					color: rgba(34, 34, 34, 0.8);
+					&:hover{
+						color: var(--bd-theme-primary);
+					}
+				}
+			}
+		}
+	}
+	.footer-widget {
+		& > p {
+			color: rgba(34, 34, 34, 0.7);
+		}
+	}
+	.footer-bottom {
+		border-color: var(--bd-border-secondary);
+	}
+	.footer-copyright-text {
+		p {
+			color: rgba(34, 34, 34, 0.8);
+		}
+	}
+	.footer-info {
+		ul {
+			li {
+				a {
+					color: rgba(34, 34, 34, 0.8);
+				}
+			}
+		}
+	}
+	.footer-widget-title {
+		color: var(--bd-heading-primary);
+	}
+	.footer-white {
+		.footer-link {
+			ul {
+				li {
+					a {
+						.footer-info {
+							ul {
+								li {
+									color: rgba(34, 34, 34, 0.8);
+								}
+							}
+						}
+						
+					}
+				}
+			}
+		}
+	}
+	.footer-copyright-links {
+		ul {
+			li {
+				a {
+					color: rgba(34, 34, 34, 0.7);
+					&:hover{
+						color: var(--bd-theme-primary);
+					}
+				}
+			}
+		}
+	}
+	.footer-copyright-text {
+		p {
+			a {
+				color: var(--bd-heading-primary);
+				&:hover{
+					color: var(--bd-theme-primary);
+				}
+
+			}
+		}
+	}
+	.footer-newsletter-title {
+		color: var(--bd-heading-primary);
+	}
+	.footer-input-field {
+		input {
+			border-bottom: 2px solid var(--bd-common-black);
+		}
+		.footer-input-btn {
+			color: var(--bd-heading-primary);
+		}
+	}
+	.footer-white {
+		.footer-social-icon {
+			ul {
+				li {
+					a {
+						&:hover {
+							color: var(--bd-theme-primary);
+						}
+					}
+				}
+			}
+		}
+	}	
+}

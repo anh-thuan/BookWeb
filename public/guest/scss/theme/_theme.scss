@@ -1,0 +1,503 @@
+@use '../utils' as *;
+
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Newgin - News & Magazine Responsive Template 
+    Author: Bdevs
+    Support: https://support.bdevs.net/
+    Description: Newgin - News & Magazine Responsive Template 
+    Version: 1.0
+
+-----------------------------------------------------------------------------------
+
+/************ TABLE OF CONTENTS ***************
+
+	-----------------
+    01. THEME CSS
+	-----------------
+		1.1 Commmon
+		1.2 Dark-mode 
+		1.3 spacing
+		1.4 Theme
+		1.5 Index
+
+		
+	-----------------
+    02. utils CSS
+	-----------------
+		2.1 Mixins
+		2.2 Root
+		2.3 Typography
+		2.4 Extends
+		2.5 Colors
+		2.6 Breakpoint
+		2.7 Index
+		
+	-----------------
+    03. COMPONENTS CSS
+	-----------------
+		3.1 Animations
+		3.2 Background
+		3.3 Back to top
+		3.4 Breadcrumb
+		3.5 Buttons
+		3.6 Form
+		3.7 Offcanvas
+		3.8 Pageination
+		3.9 post
+		3.10 Prealoder
+		3.11 Section-title
+		3.12 index
+
+	-----------------
+    04. HEADER CSS
+	-----------------
+		4.1 Header Style 01
+		4.2 Header Style 02
+		4.3 Header Style 03
+		4.4 Header Style 04
+		4.5 Header Style 05
+		4.7 index
+
+    ---------------------------------
+	05. MENU CSS
+	---------------------------------
+		5.1 Meanmenu
+		5.2 Menu
+		5.3 index
+
+	---------------------------------
+	06. BLOG CSS
+	---------------------------------
+	    6.1 Blog-details css
+		6.2 Postbox css
+		6.3 Recent Post css
+		6.4 Sidebar css
+		6.5 Blog css
+		6.6 index
+
+	---------------------------------
+	07. FOOTER CSS
+	---------------------------------
+		7.1 Footer Common
+		7.2 Footer Style 01
+		7.2 Footer Style 02
+		7.4 Footer Style 03
+		7.5 index
+      
+
+	---------------------------------
+	08. BANNER CSS
+	---------------------------------
+		8.1 Banner Style 01
+		8.2 Banner Style 02
+		8.3 Banner Style 03
+		8.4 Banner Style 04
+		8.5 index
+
+	---------------------------------
+	09. PAGES CSS
+	---------------------------------
+		9.1 About css
+		9.2 Category css
+		9.3 Contact css
+		9.4 Demo css
+		9.5 Faq css
+		9.6 featured-post css
+		9.7 Hand-pick-post css
+		9.8 Newsletter css
+		9.9 Recent-post css
+		9.10 Signup css
+		9.11 Slider css
+		9.12 Sports css
+		9.13 Explore css
+		9.14 Subscribe css
+		9.15 Team css
+		9.16 Welcome css
+		9.17 Widget css
+		9.18 Index css
+		
+/*----------------------------------------*/
+/*  1.1 Theme Default
+/*----------------------------------------*/
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+}
+
+/*---------------------------------
+    Typography css start 
+---------------------------------*/
+body {
+	font-family: var(--bd-ff-body);
+	font-size: var(--bd-fs-body);
+	font-weight: normal;
+	color: var(--bd-text-body);
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--bd-ff-heading);
+	color: var(--bd-text-body);
+	margin-top: 0px;
+	line-height: 1.3;
+	margin-bottom: 0;
+	font-weight: var(--bd-fw-sbold);
+	word-break: break-word;
+}
+
+h1 {
+	font-size: var(--bd-fs-h1);
+
+	@media #{$lg} {
+		font-size: 25px;
+	}
+
+	@media #{$sm,$xs} {
+		font-size: 24px;
+	}
+
+	&.large {
+		font-size: 50px;
+	}
+}
+
+h2 {
+	font-size: var(--bd-fs-h2);
+	@media #{$lg} {
+		font-size: 30px;
+	}
+
+	@media #{$sm,$xs} {
+		font-size: 24px;
+	}
+}
+
+h3 {
+	font-size: var(--bd-fs-h3);
+}
+
+h4 {
+	font-size: var(--bd-fs-h4);
+}
+
+h5 {
+	font-size: var(--bd-fs-h5);
+
+	&.small {
+		font-size: 20px;
+	}
+}
+
+h6 {
+	font-size: var(--bd-fs-h6);
+}
+
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+li {
+	list-style: none;
+}
+
+p {
+	font-size: var(--bd-fs-p);
+	font-family: var(--bd-ff-p);
+	font-weight: var(--bd-fw-normal);
+	color: var(--bd-text-body-2);
+	margin-bottom: 30px;
+	line-height: 26px;
+}
+
+p.b1 {
+	font-size: 24px;
+	line-height: 34px;
+}
+
+p.b2 {
+	font-size: 18px;
+	line-height: 28px;
+}
+
+p.b3 {
+	font-size: 16px;
+	line-height: 26px;
+}
+
+a {
+	text-decoration: none;
+	transition: all linear 0.3s;
+}
+
+a,
+.btn,
+button,
+span,
+sub,
+sup,
+p,
+input,
+select,
+textarea,
+li,
+img,
+svg,
+.transition-3,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@extend %bd-transition-3;
+}
+
+a:focus,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+a:focus,
+a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+a,
+button {
+	color: inherit;
+	outline: none;
+	border: none;
+	background: transparent;
+}
+
+img {
+	max-width: 100%;
+	object-fit: cover;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+button:focus {
+	outline: 0;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+hr:not([size]) {
+	margin: 0;
+	border-color: var(--bd-border-secondary);
+	opacity: 1;
+	border-width: 1px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+textarea {
+	outline: none;
+	background-color: var(--bd-bg-1);
+	height: 60px;
+	width: 100%;
+	font-size: 15px;
+	color: rgba(124, 126, 130, 0.69);
+	border: none;
+	padding: 0 25px;
+	color: var(--bd-common-black);
+
+	@include light {
+		background-color: rgba(235, 235, 235, 0.9);
+		color: rgba(124, 126, 130, 0.69);
+	}
+
+	&:focus {
+		border-color: var(--bd-theme-primary);
+	}
+}
+
+*::-moz-selection {
+	background: var(--bd-common-selection);
+	color: var(--bd-common-white);
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background: var(--bd-common-selection);
+	color: var(--bd-common-white);
+	text-shadow: none;
+}
+
+::selection {
+	background: var(--bd-common-selection);
+	color: var(--bd-common-white);
+	text-shadow: none;
+}
+
+*::-moz-placeholder {
+	opacity: 1;
+	font-size: 16px;
+	color: var(--bd-common-placeholder);
+}
+
+*::placeholder {
+	opacity: 1;
+	font-size: 15px;
+	font-weight: 400;
+	font-family: var(--bd-ff-heading);
+	color: var(--bd-common-placeholder);
+}
+
+strong{
+	font-size: 18px;
+	font-weight: 600;
+	color: var(--bd-common-black);
+	display: inline-block;
+}
+/*----------------------------------------
+   Icomoon customize
+-----------------------------------------*/
+i[class^="icon-"] {
+	line-height: 1;
+	top: 2px;
+	position: relative;
+	@extend %bd-transition-3;
+}
+
+.bd-sticky {
+	position: sticky;
+	top: 120px;
+}
+
+/*----------------------------------------
+   Flaction customize
+-----------------------------------------*/
+i[class^="flaticon-"] {
+	line-height: 1;
+	top: 2px;
+	position: relative;
+	@extend %bd-transition-3;
+}
+
+/*----------------------------------------
+   Bootstrap customize
+-----------------------------------------*/
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+	--bs-gutter-x: 3rem;
+}
+
+@media (min-width: 1441px) {
+
+	.container,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container-xl,
+	.container-xxl {
+		max-width: 1320px;
+	}
+}
+
+.row {
+	--bs-gutter-x: 3rem;
+}
+.gap-40{
+	row-gap: 40px;
+}
+.g-15,
+.gx-15 {
+	--bs-gutter-x: 16px;
+}
+
+.g-25,
+.gx-25 {
+	--bs-gutter-x: 25px;
+}
+
+.g-30,
+.gx-30 {
+	--bs-gutter-x: 30px;
+}
+
+.g-30,
+.gy-30 {
+	--bs-gutter-y: 30px;
+}
+.g-20,
+.gy-20 {
+	--bs-gutter-y: 20px;
+}
+
+.g-40,
+.gx-40 {
+	--bs-gutter-x: 40px;
+	--bs-gutter-x: 40px;
+	@media #{$md,$sm,$xs}{
+		--bs-gutter-x: 30px;
+	}
+}
+
+.g-45,
+.gx-45 {
+	--bs-gutter-x: 45px;
+}
+
+.g-40,
+.gy-40 {
+	--bs-gutter-y: 40px;
+}
+
+.g-50,
+.gx-50 {
+	--bs-gutter-x: 50px;
+	@media #{$md,$sm,$xs}{
+		--bs-gutter-x: 30px;
+	}
+}
+.g-60,
+.gx-60 {
+	--bs-gutter-x: 60px;
+}
+
+.g-50,
+.gy-50 {
+	--bs-gutter-y: 50px;
+}
+
+.g-60,
+.gy-60 {
+	--bs-gutter-y: 60px;
+}

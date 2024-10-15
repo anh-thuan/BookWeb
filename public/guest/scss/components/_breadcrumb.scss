@@ -1,0 +1,114 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.4 Breadcrumb
+/*----------------------------------------*/
+
+// Breadcrumb style
+
+.breadcrumb__menu {
+  text-align: end;
+  @media #{$md,$sm,$xs}{
+    text-align: start;
+  }
+  ul {
+    @include inline-flex();
+    gap: 25px;
+    justify-content: center;
+    li {
+      list-style: none;
+      position: relative;
+      line-height: 1;
+      &:last-child {
+        span {
+          color: var(--bd-theme-primary);
+        }
+      }
+      &:not(:last-child) {
+        &::before {
+          display: inline-block;
+          content: "\f105";
+          position: absolute;
+          top: 50%;
+          font-family: var(--bd-ff-fontawesome);
+          @extend %translateY1_2;
+          inset-inline-end: -16px;
+          font-size: 18px;
+        }
+      }
+      &.active {
+        span {
+          color: var(--bd-theme-primary);
+        }
+      }
+      span {
+        font-size: 14px;
+        font-weight: var(--bd-fw-medium);
+        text-transform: uppercase;
+        a {
+          font-weight: var(--bd-fw-medium);
+          &:hover {
+            color: var(--bd-common-white);
+          }
+        }
+      }
+    }
+  }
+}
+
+//breadcrumb-page-css-start
+.breadcrumb__menu{
+  ul{
+    li{
+      &:before{
+        color: var(--bd-common-white);
+      }
+      a{
+        color: rgba(255, 255, 255, 0.60);
+        &:hover{
+          color: var(--bd-common-white);
+        }
+      }
+      .active{
+        a{
+          color: var(--bd-common-white);
+          &:hover{
+            color: var(--bd-common-white);
+          }
+        }
+      }
+    }
+  }
+}
+
+  //back-history
+  .back-breadcrumb{
+    position: fixed;
+    z-index: 992;
+    top: 300px;
+    left: 0;
+    padding: 10px 17px;
+    background: var(--bd-theme-primary);
+    box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    @media #{$sm,$xs}{
+     display: none;
+  }
+    &:hover{
+      .back-btn{
+        margin-left: 0px;
+      }
+    }
+    }
+    .back-btn {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-left: -56px;
+    color: var(--bd-common-white);
+    transition: .3s;
+    i{
+      font-weight: 600;
+      margin-left: 10px;
+    }
+    }

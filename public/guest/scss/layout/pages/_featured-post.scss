@@ -1,0 +1,36 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  9.6 featured post css
+/*----------------------------------------*/
+.feature-post-item {
+	@extend %bd-transition-3;
+	&:hover {
+		.post-img {
+			img {
+				transform: scale(1.05);
+			}
+		}
+	}
+}
+.feature-post-title {
+	font-weight: 600;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	@media #{$lg} {
+		font-size: 20px;
+	}
+	@media #{$md,$xs} {
+		font-size: 20px;
+	}
+	a {
+		&:hover {
+			color: var(--bd-theme-primary);
+		}
+	}
+}
+.feature-post-content {
+	& > p {
+		margin-bottom: 0;
+	}
+}
